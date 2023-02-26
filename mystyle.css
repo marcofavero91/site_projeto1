@@ -10,7 +10,7 @@ body {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: clamp(16px, 1.5vw, 1.5rem);
     margin-bottom: 1rem;
 }
 
@@ -80,7 +80,7 @@ align-items: center;
 }
 
 .nav-links a {
-    font-size: 2rem;
+    font-size: clamp(10px, 20vw, 2rem);
     padding: .1rem 1rem;
 }
 
@@ -173,7 +173,7 @@ header a {
 }
 
 .photo-gallery img {
-    width: 30rem;
+    width: clamp(160px, 35vw, 40rem);
     height: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -181,6 +181,7 @@ header a {
 
 .photo-gallery figcaption {
     margin-bottom: 3rem;
+    font-size: clamp(12px, 1.2vw, 3rem);
 }
 
 .photo-gallery {
@@ -190,6 +191,13 @@ header a {
     width: 100%;
     margin: 0 auto;
 }
+
+@media (max-width: 830px) {
+    .photo-gallery {
+        flex-direction: column;
+    }
+}
+
 
 form,
 input,
@@ -233,18 +241,14 @@ textarea:focus {
     align-items: center;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1017px) {
     .agendamento-flex {
         flex-direction: column;
-    }
-    .agendamento-flex img {
-        height: 2rem;
-        padding-top: 2rem;
     }
 }
 
 .agendamento-flex img {
-    height: 40rem;
+    height: clamp(40vh, 70vh, 40rem);
     width: auto;
     border-radius: 10px;
 }
