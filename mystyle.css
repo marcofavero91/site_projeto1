@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 49);
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+h1,
+h2,
+label {
+    font-family: 'Russo One', sans-serif;
+    color: rgb(0, 0, 150);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.title {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+header {
+    background-image: linear-gradient(rgba(1, 1, 22, 0.658), rgba(9, 9, 243, 0.726)), url(./img/hero.jpg);
+    height: 85vh;
+    background-size: cover;
+    padding-top: 5rem;
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+    animation-name: moveInUp;
+    animation-duration: 2s;
+    margin-bottom: 10rem;
+}
+
+.logo-container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.nav-links {
+display: flex;
+justify-content: space-around;
+list-style-type: none;
+align-items: center;
+}
+
+.nav-links a {
+    font-size: 2rem;
+    padding: .1rem 1rem;
+}
+
+.nav-links a:hover {
+    background-color: rgb(247, 170, 55);
+    color: rgb(0, 0, 150);
+    border-radius: 10px;
+}
+
+header a {
+    text-decoration: none;
+    animation-name: opacity;
+    animation-duration: 1.5s;
+    animation-delay: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+    color: white;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 780px) {
+.nav-links {
+    flex-direction: column;
+}
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#sobre,
+#estrutura,
+#agendamento,
+#contato {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.color1 {
+    background-color: rgb(247, 170, 55);
+    padding: 3rem 0;
+}
+
+.color2 {
+    background-color: rgb(255, 198, 112);
+    padding: 3rem 0;
+}
+
+.first-paragraph,
+.second-paragraph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .first-paragraph {
+        flex-direction: column;
+    }
+
+    .second-paragraph {
+        flex-direction: column-reverse;
+    }
+}
+
+.first-paragraph img {
+    border-radius: 50%;
+    max-width: 15rem;
+    margin-left: 2rem;
+}
+
+.first-paragraph p,
+.second-paragraph p {
+    width: 100%;
+}
+
+.second-paragraph img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 28rem;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.photo-gallery img {
+    width: 30rem;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.photo-gallery figcaption {
+    margin-bottom: 3rem;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form,
+input,
+textarea {
+    display: block;
+    margin-bottom: 1.5rem;
+    width: clamp(350px, 95%, 50rem);
+    padding: 1rem;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+form,
+input,
+textarea:focus {
+    outline-color: rgb(0, 0, 150);
+}
+
+.form button {
+    font-family: 'Russo One', sans-serif;
+    color: rgb(247, 170, 55);
+    background-color: rgb(0, 0, 150);
+    padding: .5rem 1.5rem;
+    border-color: rgb(0, 0, 150);
+    border-radius: 10px;
+}
+
+.form button:hover {
+    font-family: 'Russo One', sans-serif;
+    color: rgb(0, 0, 150);
+    background-color: rgb(247, 170, 55);
+}
+
+.agendamento-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 990px) {
+    .agendamento-flex {
+        flex-direction: column;
+    }
+    .agendamento-flex img {
+        height: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+.agendamento-flex img {
+    height: 40rem;
+    width: auto;
+    border-radius: 10px;
+}
+
+.social li {
+    display: inline;
+    margin-left: 3rem;
+}
+
+@media (max-width: 1555px) {
+    .social li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+.social {
+    width: 30%;
+    margin: 3rem auto;
+}
+
+.social img {
+    height: 3rem;
+    opacity: .5;
+}
+
+.social img:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: rgb(10, 10, 128);
+    color: white;
+    height: 10vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: rgb(10, 10, 128);
+    background-color: white;
+}
+
+footer p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.whats {
+    width: 4rem;
+    position: fixed;
+    bottom: 7rem;
+    right: 3rem;
+}
+
+.whats:hover {
+    transform: scale(1.5);
+}
